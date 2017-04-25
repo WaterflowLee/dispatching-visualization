@@ -39,7 +39,7 @@ $(function () {
         $("#frame_num_slider").slider({
             range: false,
             min: 0,
-            max: frame_num,
+            max: frame_num - 1,
             value:0,
             slide: function(event, ui) {
                 $("#frame_num span").text(ui.value);
