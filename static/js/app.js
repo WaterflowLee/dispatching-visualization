@@ -31,6 +31,7 @@ $(function () {
 
         // 第二代码段
         var chart = scatterChart().outerDivId("graphHolder")
+            .margins({top:30, left:50, right:30, bottom:30})
             .xScale(d3.scaleLinear().domain([0, 1000]))
             .yScale(d3.scaleLinear().domain([0, 1000]))
             .sizeScale(d3.scaleLinear().domain([0,machine_max_load]).range([5, 20]));
