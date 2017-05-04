@@ -16,14 +16,29 @@
 <body>
 <div class="container">
     <div class="row">
-        <div id="graphHolder" class="col-md-12" style="height: 550px;">
+        <div class="col-md-6">
+            <div class="row">
+                <div id="graphHolder" class="col-md-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    Frame:<span id="frameNum">0</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3" id="frameNumSlider">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3" id="frame_num">
-            Frame:<span>0</span>
+        <div class="col-md-offset-6 col-md-3">
+            <div class="row">
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div id="graphHolderLeft" class="col-md-12"></div>
+            </div>
         </div>
-        <div class="col-md-6 col-md-offset-3" id="frame_num_slider"></div>
     </div>
 </div>
 <script src="static/js/jquery.min.js"></script>

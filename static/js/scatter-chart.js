@@ -79,27 +79,42 @@ function scatterChart() {
     function renderCircles(){
         // selectAll 和 data 分别指定两个集合,
         // 两个集合都指定后才能enter
+        // _bodyG.selectAll("circle.node").remove();
         _bodyG.selectAll("circle.node")
             .data(_data)
             .enter()
             .append("circle")
-            .attr("class", "node")
             .attr("cx", function (d) {
-                return _xScale(d[0]);
+                return _xScale(d.x);
             })
             .attr("cy", function (d) {
-                return _yScale(d[1]);
+                return _yScale(d.y);
             })
             .attr("r", function (d) {
-                return _sizeScale(d[2]);
+                return _sizeScale(d.size);
             })
+            .attr("id", function (d) {
+                // console.log("New enter!");
+                return d.id;
+            })
+            .attr("class", "node")
             .attr("fill", "#ffffff");
         _bodyG.selectAll("circle.node")
             .data(_data)
             .transition()
             .attr("fill",function(d){
-                return _colors(d[3]);
+                return _colors(d.color);
+            })
+            .attr("class", function (d) {
+            return d.class?"node " + d.class:"node";
             });
+        // _bodyG.selectAll("circle.node")
+        //     .data(_data)
+        //     .exit()
+        //     .remove();
+        // 在chrome的debug里面看到的是直接的颜色更改，没有节点的增加或者减少，
+        // 即没有新的enter和exit，没有新的enter，可以在enter中验证:
+        // 在初始的100个enter之后，改变节点颜色，并没有新的enter发生
     }
 
     function xStart() {

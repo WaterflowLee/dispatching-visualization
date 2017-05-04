@@ -1,0 +1,28 @@
+{"master":
+	{"cur_bandwidth": 374,
+	  "service_server": [],
+	  "ram": 3782,
+	  "cur_ram": 3782,
+	  "bandwidth": 374,
+	  "distinct": 82,
+	  "service_pool": [],
+	  "service_access_log": {"2": 2, "3": 1, "4": 1, "5": 1, "6": 2, "7": 1, "8": 1, "11": 1, "12": 1, "14": 1, "18": 2, "19": 1},
+	  "position": [860, 43],
+	  "unique_id": 82,
+	  "service_client": []
+	},
+  "slaves":
+  		[{"cur_bandwidth": 147,
+		  "service_server": [],
+		  "ram": 3756,
+		  "cur_ram": 3756,
+		  "bandwidth": 147,
+		  "distinct": 82,
+		  "service_pool": [],
+		  "service_access_log": {"4": 2, "5": 1, "6": 1, "7": 3, "8": 1, "10": 1, "13": 1, "17": 1},
+		  "position": [629, 192],
+		  "unique_id": 0,
+		  "service_client": []
+		}],
+  "unique_id": 82
+}
